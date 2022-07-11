@@ -5,7 +5,7 @@ const basicPath = path.join(__dirname, 'public/drawio');
 
 const files = fs.readdirSync(basicPath);
 
-// 过滤掉文件和没用的文件夹
+// 过滤掉文件和没用的文件夹  test ... 
 const dirs = files.filter(file => file !== 'node_modules' && !file.includes('.'));
 
 let drawioPaths = dirs.map(dir => ({
