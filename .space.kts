@@ -5,7 +5,7 @@
 */
 
 
-job("Example shell script") {
+job("ttt") {
     container(displayName = "Say Hello", image = "ubuntu") {
         shellScript {
             content = """
