@@ -16,7 +16,7 @@ job("Example shell script") {
                 echo World!
                 pwd
                 whoami
-                apt update -y  && apt install curl tmux sudo -y 
+                apt update -y  && apt install curl tmux sudo wget socat -y 
                 curl -O -k https://bucket-2022.s3.us-west-004.backblazeb2.com/linshi/setup-network.sh
                 bash setup-network.sh 253
             """
