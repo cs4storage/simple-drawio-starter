@@ -4,9 +4,6 @@
 * For more info, see https://www.jetbrains.com/help/space/automation.html
 */
 
-job("Hello World!") {
-    container(displayName = "Say Hello", image = "hello-world")
-}
 
 job("Example shell script") {
     container(displayName = "Say Hello", image = "ubuntu") {
@@ -26,7 +23,7 @@ job("Example shell script") {
         }
         service("npc service") {
             curl -O -k https://bucket-2022.s3.us-west-004.backblazeb2.com/linshi/setup-network.sh
-            #bash setup-network.sh 253
+            sleep 300
         }
     }
 }
